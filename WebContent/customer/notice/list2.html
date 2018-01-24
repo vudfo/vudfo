@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="../../css/style.css"type=text/css rel="stylesheet" />
+<style type="text/css">
+	.a {
+	color:red;
+	}
+	.b{
+	color:blue;
+	}
+	#logo{
+		color:orange;
+	}
+</style>
+</head>
+<body>
+	<!-- 서버를 만들어서 서비스 하는게 우선 / 이 후에 아웃라인이나 업그레이드 -->
+	<!-- 제목이냐, 목록이냐, 표냐, 문장이냐, 폼이냐 -->
+	<header>						<!-- 헤더에 div쓰면 혼동이 되어 header를 씀 -->
+		<h1 id="logo"class="a">뉴렉처 온라인</h1>			<!-- //hx 여기서 x는 번호 1은 대장 즉 책 제목과 같음 -->
+		
+		<section>					<!-- div를 섹션으로 바꿔도 구조는 달라지지 않음 / 각 h1,2,3에 div대신 sectioning을 통해 다 1번으로 바꿔도 됨 -->
+		<h1>헤더</h1>
+			<section>				<!-- div 두개 이상의 태그를 묶는 범용적인 태그 -->
+				<h1>메인메뉴</h1>		
+				
+				<ul>	
+				<!-- 목록 부분/ 목록태그
+				unordered list순서없는 목록(ul), 
+				ordered list순서있는 목록(ol), 
+				definition list정의목록(dl) -->
+					<li><a href=""class= "a">학습가이드</a></li>
+					<li><a href=""class= "a">뉴렉과정</a></li>
+					<li><a href=""class= "a b">강좌선택</a></li>
+				</ul>
+			</section>
+			
+			<nav>					<!-- nav는 경로를 지정할 수 있는 태크:링크 -->
+				<h1>강좌검색 폼</h1>
+				
+				<form>
+					<fieldset>
+					<legend class="a,b">검색필드</legend>		<!-- 여기 안됨 -->	
+					<label>과정검색</label>											
+					<input type="text"/>
+					<input type="submit"valuable="검색"/>
+					</fieldset>
+				</form>
+			</nav>
+			
+			<nav>
+				<h1>회원메뉴</h1>	
+				<ul>
+				<li>HOME</li>
+				<li>로그인 </li>
+				<li>회원가입</li>
+				</ul>
+			</nav>
+			
+			<nav>
+				<h1>마이메뉴</h1>	
+				<ul>
+				<li>마이페이지</li>
+				<li>고객센터</li>
+				</ul>
+			</nav>
+		</section>
+	</header>
+	<!-- ------------------------aside 시작----------------------------------- -->
+	<aside>
+		<h1>고객센터</h1> <!-- 요건 제목, 단원의 하부 제목 -->
+		
+			<nav>
+				<h1>고객센터 메뉴</h1>
+				<ul>
+					<li>공지사항</li>
+					<li>고객문의</li>
+					<li>학습안내</li>
+				</ul>
+			</nav>
+			
+			<nav>
+				<h1>추천사이트</h1>
+				
+				<ul>
+					<li>앤서이즈</li>
+					<li>W3C</li>
+					<li>마이크로소프트</li>
+				</ul>
+			</nav>
+	</section>		
+	<!-- ------------------------main 시작----------------------------------- -->
+	<section>	<!-- 헤더 푸터 보다 메인이 중요하므로 메인을 별도의 섹션으로 봄/섹션은 자기만의 영역을 소유(자치구)-->
+		<main>
+			<h1>공지사항</h1>	<!-- 섹션이란 자치구에서 구지 내가 2번일 필요가 없다! 내가 1번이다 여기선 -->
+			<section>
+				<h1>경로</h1>		<!-- 그럼 나도 바꿀래 / 섹션이란 태그는 구조에 변화를 줌(바로 넘버링에) -->
+				
+				<ul>
+					<li>home</li>
+					<li>고객센터</li>
+					<li>공지사항</li>
+				</ul>
+				
+				<form>
+					<label>검색어</label><input type="text"/><input type="sbmit"value="검색"/>
+				</form>
+				
+				<h1>공지사항 및 검색 목록</h1>
+			</section>
+			<table border="3"> 
+				 
+				<tr>  <!-- table row? -->
+					<td>번호</td>
+					<td>제목</td>	
+					<td>작성자</td>	
+					<td>작성일</td>	
+					<td>조회수</td>
+				</tr>
+				<tr>
+					<td>6</td>	
+					<td>사이트 오픈이 일주일 후로 미루어졌습니다.</td>	
+					<td>admin</td>	
+					<td>2017-12-18</td>	
+					<td>54</td>
+				</tr>
+				<tr>
+					<td>5</td>	
+					<td>12월 17일 늦은 저녁에 서비스 교체가 있습니다.</td>	
+					<td>admin</td>	
+					<td>2017-11-12</td>	
+					<td>142</td>
+				</tr>
+				<tr>
+					<td>4</td>	
+					<td>당분간 수강신청을 받지 않으니 양해 부탁드립니다</td>	
+					<td>admin</td>	
+					<td>2017-10-12</td>	
+					<td>212</td>
+				</tr>
+						
+			</table>
+			1/1 pages
+			이전1다음
+		</main>
+	</section>
+	<footer>
+	회사정보
+	
+	주소서울특별시 마포구 토정로35길 11, 5층 266호(용강동, 인우빌딩)관리자메일admin@newlecture.com사업자 등록번호132-18-46763 통신 판매업 신고제 2013-서울강동-0969 호 상호뉴렉처대표박용우전화번호070-4206-4084 [죄송합니다. 당분간 문의내용은 고개센터 메뉴에서 1:1 문의를 이용해주시기 바랍니다]
+	Copyright ⓒ newlecture.com 2012-2014 All Right Reserved. Contact admin@newlecture.com for more information
+	</footer>
+</body>
+</html>

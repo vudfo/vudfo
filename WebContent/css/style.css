@@ -1,0 +1,177 @@
+@charset "utf-8";
+
+/* 세 번째 방
+왼족 aside 오른쪽 main */
+/* ------------reset------리셋하는 위치---- */
+body{
+	margin : 0px;
+}
+
+h1{
+	margin : 0px;
+} 
+
+ul{
+	padding : 0px;
+	margin : 0px;
+}
+
+li{
+	display : block;	
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+}
+/* --------추상화(공통분모)-abstract style--------------- */
+.hor-menu{
+	display: inline-block;
+	
+	}
+		.hor-menu>h1{
+			display : none;
+		}	
+	
+			.hor-menu>ul{
+				
+				overflow: auto;
+			}
+	
+			 	.hor-menu > ul > li{ 
+			 	  float : left;
+			 	  
+			 	}	
+					
+					.hor-menu.firts-pad-none > ul > li:first-child{
+						/* padding-left: 0px !important;
+						background: none !important; */
+						padding-left: 0px;
+						background: none;
+						
+					}
+			/* !important, 최우선순위 설정 */
+}
+
+/* --------------------header---------------------------------- */
+#header{
+	 height: 70px;
+
+}
+	#main-menu{ 
+	
+	font-size: 30px;
+	font-family: "맑은고딕","고딕","sans-serif";
+	font-size: 15px; /* 1em은 ~배 */
+	font-weight: bold;
+	color: #000000;
+				
+	}
+	
+	 	#main-menu > ul > li{ 
+	 
+	 	  padding-left: 24px;
+	 	  background: url("../images/bg-main-menu-vsp.png") no-repeat 13px center;
+	 	  
+	 	}	
+
+/* -------------------------------------------------------------- */
+
+			#member-menu{
+			font-family: "맑은고딕", "고딕", "sans-serit";
+			font-size: 10px;
+			font-weight: bold;
+			}
+				#member-menu > ul > li {
+				float : left;
+				padding-left: 9px;
+				background: url("../images/bg-member-menu-sp.png") no-repeat 13px center;;			
+				}
+
+/* -------------------------------------------------------------- */
+
+		#member-menu{
+		font-family: "맑은고딕","고딕","sans-serif";
+		font-size: 10px;
+		font-weight: bold;
+		}
+			#member-menu > ul > li {
+			padding-left: 9px;
+			background: url("../images/bg-member-menu-sp.png") no-repeat 4px center;;			
+			}
+
+/* -------------------------------------------------------------- */
+#visual{
+	 height: 171px;
+	 /* background: #313131 url("../images/bg-visual.png") no-repeat center; */
+	
+	 border-top:3px solid #8CBA34;	/* 경계선 추가 */
+
+}
+
+#body{
+	 min-height: 300px;
+	 border-top:5px solid #8CBA34;
+	 margin-top:1px;
+						 
+}
+
+
+#footer{
+	 height: 200px;
+	 background: #313131;
+
+}
+.root-container{
+	height: 100%;
+	min-height:inherit;
+	/* height: inherit; */
+	width: 960px;
+
+	margin-left: auto;
+    margin-right: auto;  
+	
+}
+
+#body > .root-container{	/* //body영역 안에 root-container만 범위설정 */
+						/* > body 바로 안에 있는 자식 */	
+	display : flex;
+	/* flex-direction: column-reverse; */	/* flex 한 거를 반대편으로 놓음 */
+	/* flex-direction: row-reverse; */
+	flex-direction : row;
+	background:url("../images/bg-body.png") repeat-y center;
+	/* aside와 main사이 그라데이션 */
+}
+
+#aside{	
+	min-height: inherit;
+	min-width: 205px;
+	background:url("../images/bg-aside-title.png") no-repeat center top; /* left */
+	
+	/* float:left; */
+}
+
+#main{
+	box-sizing: border-box;
+	min-height: inherit;
+	min-width: 755px;
+	padding : 45px 0px 40px 35px;
+	
+
+	/* float:left; */
+}
+
+/* 2.0수준으로 할때 */
+.clear-fix::after{ /* psuedo(허위의 가상의 것을 추가함) */
+	content: "안뇽하세요?";
+	/* 위 텍스트가 디스플레이 형식을 가져야함, 제목, 표, 박스, 표 */
+	
+	display: block;
+	clear: both;	/* 보통 양쪽을 클리어 */
+	height: 0px;
+	border: 1px solid red;
+	overflow : hidden;
+}
+
+
+

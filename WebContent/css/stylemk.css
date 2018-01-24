@@ -1,0 +1,227 @@
+@charset "utf-8";
+
+/* 첫 번째 방
+-height / min-height
+-reset:body(margin 을 리셋)
+두 번째 방
+-height / min-height : 100%, inherit
+-박스를 정렬 :width 고정 -> margin-left/right/center
+-margin/padding/border
+-DevTool(F12) 
+세 번째 방
+-floating,clear-fix
+*/
+
+/* -------------reset-------------------*/
+body{
+	margin:0px;
+}
+
+ul{
+	padding: 0px;
+	margin: 0px; 
+}
+
+li{
+	display: block;
+}
+
+h1{
+	margin: 0px;
+}
+
+a{
+	text-decoration:none;
+	color:inherit;
+}
+
+
+/* ------abstract style------------------------------------- */
+
+/* ------ 버튼(component)------------------------------------- */
+
+.btn{
+}
+
+.btn-default{
+
+	/* 배경색넣기 */
+	background: #759d2a;
+	min-width: 71px;	
+	color: #ffffff;
+	display: inline-block; /* 너비 적용은 박스에서..display */
+	text-align: center;  /* 텍스트 정렬 가운대로 */ 
+	/* 박스의 가운데정렬은? margin auto 혼자 박스 쓸 때, 양쪽 너비를 잘  */
+	/* padding: 3px 8px 3px 8px; */ /* 같을 땐  2개만 써도됨 */
+	padding: 3px 8px;	
+	/* 버튼 꼭지점 라운드로 */
+	border-radius: 4px;
+	
+}
+
+.btn-warning{
+	
+}
+
+.bin-cancel{
+	
+}
+/* --------------------------------------------------------- */
+.hor-menu{
+		display: inline-block;
+	}
+	
+	.hor-menu>h1{
+		display:none;
+	}
+	
+	.hor-menu > ul{      
+		overflow:auto;
+	}
+	
+	.hor-menu > ul > li{ 
+		float:left;
+	}
+	
+	.hor-menu.first-pad-none > ul > li:first-child{  /* and연산 .first-pad-none */
+		padding-left:0px; /* !치면 오버라이드 안됨 */
+		background:none;
+	}
+	
+	
+
+
+/* ---------------------------------------------------------- */
+#header{
+	height:70px;
+}
+	.main-menu{
+	/* 	border : 1px solid red; */
+		/* font-size: 15px; */
+		font-family:"맑은고딕", "고딕", sans-serif;
+		font-size:15px;
+		font-weight: bold;
+		color : #000000;
+	}
+	
+	
+	/* #main-menu a{ 
+		font-size: 1em;  바깥쪽 폰트크기의 1배 / 비례적으로 만들때 사용
+	} */
+	
+	
+
+	/* #main-menu > ul::after{  [클리어픽스]
+		content:".";
+		display:block;
+		height:0px;
+		overflow:hidden;
+		clear:left;
+	} */
+	
+	
+	.main-menu > ul > li{ 
+		padding-left:24px;
+		background:url("../images/bg-main-menu-vsp.png") no-repeat 13px center;
+	}
+	
+	/* #main-menu > ul > li:first-child{  한번 더 선언해줘야 오버라이드 다시 오버라이드 함 이거 하거나 important 해주거나
+		padding-left:0px; 
+		background:none;
+	} */
+	
+	/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+	/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+	
+	.member-menu{
+		font-family:"맑은고딕", "고딕", sans-serif;
+		font-size:10px;
+		font-weight: bold;
+	}
+	
+		.member-menu > ul > li{
+			padding-left: 9px;
+			background:url("../images/bg-mamber-menu-sp.png") no-repeat 4px center;
+			float : left;
+		}
+	
+	
+	
+/* ---------------------------------------------------------- */
+/* ---------------------------------------------------------- */
+#visual{
+	height:171px;
+	/* background:#313131 url("../images/bg-visual.png") no-repeat center; */
+	border-top:3px solid #8CBA34;
+}
+
+#body{
+	min-height:300px;  /* 최소300 */
+	border-top:5px solid #8CBA34;
+	margin-top:1px;
+}
+
+#footer{
+	height:160px;
+	background:#313131;
+}
+
+.root-container{
+	height:100%;
+	min-height:inherit;
+	/* height:inherit; */
+	width:960px;
+	
+	
+	margin-left:auto;  /* //가운데 몰리게해줌 */
+	margin-right:auto;
+} 
+
+#body>.root-container{
+	display : flex;
+	flex-direction:row;
+	background:url("../images/bg-body.png") repeat-y center; 
+}
+#aside{ /* //id로 해준다 */
+	min-height:inherit;
+	min-width:205px;
+	/* float:left; */
+	background:url("../images/bg-aside-title.png") no-repeat left top;
+}
+
+
+#main{
+	box-sizing:border-box;
+	min-height:inherit;
+	width:755px;
+	/* float:left; */
+	padding:45px 0px 40px 35px; /* 공간여백주기 */
+}
+
+#main > section > h1{
+	border:1px solid red;
+	width:100px;
+	height:100px;
+	background:  url("../images/logo.png") no-repeat left top;
+	/* background-attachment:local; */
+	
+	
+	overflow:scroll;
+}
+
+
+
+.clear-fix{
+	
+}
+
+.clear-fix::after{
+	content: "안녕하세요?";
+	display: block;
+	clear:both;
+	height:0px;
+	border:1px solid red;
+	overflow:hidden;
+}
+
+

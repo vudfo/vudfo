@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+/* 첫 번재 방
+-height / min-height
+-rest : body(margin 을 리셋)
+두 번째 방
+height / min-height : 100%, inherit 100%로 가 안된이유?
+-박스를 정렬 : width:고정 -> margin-left/right/center
+-margin / padding / border
+-DevTool(f12) */
+
+/* 세 번째 방
+왼족 aside 오른쪽 main */
+/* ------------reset---------- */
+body{
+	margin : 0px;
+}
+
+/* ------------------------ */
+#header{
+	 height: 70px;
+	 background : yellow;
+}
+
+#visual{
+	 height: 171px;
+	 background : red;
+}
+
+#body{
+	 min-height: 300px; /* 최소300 */
+	 background : green;
+}
+
+#footer{
+	 height: 200px;
+	 background : blue;
+}
+.root-container{
+	height: 100%;
+	min-height:inherit;
+	/* height: inherit; */
+	width: 960px;
+	background: pink;
+	opacity: 0.5;	/* 불투명도 */
+	margin-left: auto;
+    margin-right: auto;  
+
+}
+
+#aside{	
+	min-height: inherit;
+	width: 205px;
+	background: yellow;
+	float:left;
+}
+
+#main{
+	min-height: inherit;
+	width: 755px;
+	background: white;
+	float:left;
+}
+

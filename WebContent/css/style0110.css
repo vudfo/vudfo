@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+
+
+/* ------------reset---------- */
+body{
+	margin : 0px;
+}
+
+/* ------------------------ */
+#header{
+	 height: 70px;
+	 background : yellow;
+}
+
+#visual{
+	 height: 171px;
+	 background : red;
+}
+
+#body{
+	 min-height: 300px; /* 최소300 */
+	 background : green;
+}
+
+#footer{
+	 height: 200px;
+	 background : blue;
+}
+
